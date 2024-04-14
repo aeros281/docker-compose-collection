@@ -1,0 +1,10 @@
+services:
+  livebook:
+    image: ghcr.io/livebook-dev/livebook
+    user: $DOCKER_USER
+    volumes:
+      - "${PWD}/data:/data"
+    environment:
+      - LIVEBOOK_PASSWORD=areallylongpassword
+      - LIVEBOOK_DISTRIBUTION_TEST=name
+    network_mode: host
